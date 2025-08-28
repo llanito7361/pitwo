@@ -1,9 +1,9 @@
 const {Router} = require('express')
-const gamesRouter = require('./games.route')
+const petsRouter = require('./pets.route')
 
 const mainRouter = Router()
 
-mainRouter.use('/games',gamesRouter)
+mainRouter.use('/pets',petsRouter)
 
 mainRouter.get('/',(req,res)=>res.send('oli desde / en plan root asi a guacha pelada'))
 

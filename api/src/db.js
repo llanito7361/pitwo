@@ -1,9 +1,9 @@
 const Sequelize = require("sequelize");
-const gamesModels = require("./models/games.models");
+const petsModels = require("./models/pet.models");
  
-//cambiar nombre de db de games a pi
+//cambiar nombre de db de pets a pi
    const sequelize = new Sequelize(
-  process.env.DB_NAME || "games",
+  process.env.DB_NAME || "pi",
   process.env.DB_USER || "postgres",
   process.env.DB_PASSWORD || "1235",
   {
@@ -14,7 +14,7 @@ const gamesModels = require("./models/games.models");
   }
 )
 
-gamesModels(sequelize)
+petsModels(sequelize)
 
     console.log(sequelize.models)
 
